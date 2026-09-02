@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0d" />
+  <title>ALI FASHION — Step Into Your Era</title>
+  <meta name="description" content="ALI FASHION — Gen-Z footwear, new arrivals, sneakers and everyday drops." />
+  <link id="dynamic-favicon" rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="announcement" id="announcement">FREE DELIVERY ON SELECTED DROPS · CASH ON DELIVERY AVAILABLE</div>
+
+  <header class="nav-wrap">
+    <a class="brand" href="#top" aria-label="ALI FASHION home">
+      <img id="brandLogo" src="assets/logo.png" alt="ALI FASHION" />
+    </a>
+    <nav class="desktop-nav" id="navLinks"></nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+      <button class="cart-btn" id="openCart" aria-label="Open cart">CART <span id="cartCount">0</span></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-pad">
+      <div class="hero-copy reveal">
+        <p class="eyebrow" id="heroEyebrow">NEW DROP / 26</p>
+        <h1 id="heroTitle">STEP INTO<br><em>YOUR ERA.</em></h1>
+        <p class="hero-text" id="heroText">Street-ready sneakers and everyday pairs built for the main character in you.</p>
+        <div class="hero-cta">
+          <a href="#shop" class="btn primary" id="heroPrimary">SHOP THE DROP</a>
+          <a href="#genz" class="btn ghost" id="heroSecondary">EXPLORE GEN-Z</a>
+        </div>
+        <div class="mini-stats" id="heroStats"></div>
+      </div>
+
+      <div class="hero-stage reveal" aria-hidden="true">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div>
+        <div class="stage-card stage-card-back"></div>
+        <div class="stage-card stage-card-front">
+          <div class="shoe-svg-wrap">
+            <svg class="shoe-svg" viewBox="0 0 760 390" role="img" aria-label="stylized sneaker illustration">
+              <defs>
+                <linearGradient id="shoeG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".48" stop-color="#d4d4d8"/><stop offset="1" stop-color="#f04444"/></linearGradient>
+                <filter id="shadow"><feDropShadow dx="0" dy="30" stdDeviation="20" flood-opacity=".35"/></filter>
+              </defs>
+              <g filter="url(#shadow)" transform="rotate(-9 380 195)">
+                <path d="M90 250c58-1 98-22 144-69l84-88c18-18 51-12 60 12l28 79c5 15 16 26 31 32l151 58c40 15 73 54 72 92H92c-31 0-48-25-42-52 6-28 17-50 40-64z" fill="url(#shoeG)"/>
+                <path d="M96 302h548c18 0 29 12 22 31l-9 25H83c-25 0-38-16-34-37 3-13 18-19 47-19z" fill="#111216"/>
+                <path d="M278 151l117 25M252 181l154 32M224 213l164 29" stroke="#111216" stroke-width="13" stroke-linecap="round" opacity=".72"/>
+                <path d="M444 221l87 33" stroke="#ff1717" stroke-width="18" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <span class="stage-tag" id="stageTag">ALI / 001</span>
+          <span class="stage-price" id="stagePrice">DROP CULTURE</span>
+        </div>
+        <div class="float-pill p1" id="heroPill1">3D ENERGY</div>
+        <div class="float-pill p2" id="heroPill2">GEN-Z FIT</div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-hidden="true"><div id="marqueeText">ALI FASHION ✦ NEW ARRIVAL ✦ OWN THE STREET ✦ GEN-Z DROP ✦</div></section>
+
+    <section class="section-pad categories-section" id="categories">
+      <div class="section-head reveal"><div><p class="eyebrow" id="categoryEyebrow">PICK YOUR MOOD</p><h2 id="categoryTitle">Shop by vibe.</h2></div><p id="categoryText">Fresh rotation. Zero boring pairs.</p></div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <section class="section-pad products-section" id="shop">
+      <div class="section-head reveal"><div><p class="eyebrow" id="productsEyebrow">LATEST HEAT</p><h2 id="productsTitle">New arrivals.</h2></div><div class="filter-pills" id="filterPills"></div></div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state hidden" id="emptyProducts">No products in this drop yet. Come back soon.</div>
+    </section>
+
+    <section class="section-pad genz-block" id="genz">
+      <div class="genz-panel reveal">
+        <div class="genz-copy"><p class="eyebrow" id="genzEyebrow">GEN-Z EDIT</p><h2 id="genzTitle">Not made to blend in.</h2><p id="genzText">Chunky proportions, sharp details, fearless colors. Curated for people who dress like the algorithm is watching.</p><a href="#shop" class="btn light" id="genzButton">FIND YOUR PAIR</a></div>
+        <div class="genz-art"><div class="cube c1"></div><div class="cube c2"></div><div class="cube c3"></div><div class="big-type">AF</div></div>
+      </div>
+    </section>
+
+    <section class="section-pad trust-row" id="trustRow"></section>
+
+    <section class="section-pad newsletter reveal">
+      <p class="eyebrow" id="newsletterEyebrow">DON'T MISS THE DROP</p><h2 id="newsletterTitle">Your inbox deserves better shoes.</h2><p id="newsletterText">Follow our latest arrivals and limited drops.</p>
+      <a class="btn primary" id="newsletterButton" href="#shop">SHOP NOW</a>
+    </section>
+  </main>
+
+  <footer class="footer section-pad">
+    <div><img id="footerLogo" src="assets/logo.png" alt="ALI FASHION"><p id="footerText">Footwear for your next era.</p></div>
+    <div class="footer-links" id="footerLinks"></div>
+    <p class="copyright" id="copyright">© 2026 ALI FASHION. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head"><div><p class="eyebrow" id="cartEyebrow">YOUR ROTATION</p><h3 id="cartTitle">Cart</h3></div><button class="icon-btn" id="closeCart">✕</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary"><div><span id="subtotalLabel">Subtotal</span><strong id="cartSubtotal">৳0</strong></div><p id="shippingNote">Shipping is calculated at checkout.</p><button class="btn primary full" id="checkoutBtn">CHECKOUT</button></div>
+  </aside>
+
+  <div class="modal" id="productModal"><div class="modal-card product-modal-card"><button class="modal-close" data-close-modal>✕</button><div id="productModalBody"></div></div></div>
+
+  <div class="modal" id="checkoutModal"><div class="modal-card checkout-card"><button class="modal-close" data-close-modal>✕</button><p class="eyebrow" id="checkoutEyebrow">SECURE CHECKOUT</p><h3 id="checkoutTitle">Complete your order</h3><form id="checkoutForm">
+    <div class="form-grid"><label><span id="nameLabel">Full name</span><input required name="name" autocomplete="name"></label><label><span id="emailLabel">Email</span><input required type="email" name="email" autocomplete="email"></label><label><span id="phoneLabel">Phone</span><input required name="phone" autocomplete="tel"></label><label><span id="cityLabel">City</span><input required name="city"></label></div>
+    <label><span id="addressLabel">Delivery address</span><textarea required name="address" rows="3"></textarea></label><label><span id="noteLabel">Order note</span> <span class="muted" id="optionalLabel">(optional)</span><textarea name="note" rows="2"></textarea></label>
+    <input class="hp" name="website" tabindex="-1" autocomplete="off">
+    <div class="checkout-total"><span id="estimatedTotalLabel">Estimated total</span><strong id="checkoutTotal">৳0</strong></div>
+    <button class="btn primary full" type="submit" id="placeOrderBtn">PLACE ORDER</button><p class="form-status" id="formStatus"></p>
+  </form></div></div>
+
+  <div class="search-panel" id="searchPanel"><input id="searchInput" placeholder="Search your next pair…" autocomplete="off"><button id="closeSearch">✕</button></div>
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

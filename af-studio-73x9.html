@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><title>ALI FASHION — Studio</title>
+  <link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <div id="loginView" class="login-shell">
+    <form id="loginForm" class="login-card">
+      <img src="assets/logo.png" alt="ALI FASHION"><p class="tag">PRIVATE STUDIO</p><h1>Welcome back.</h1><p>Secure admin access. This page is not linked from the storefront.</p>
+      <label>Email<input type="email" name="email" required></label><label>Password<input type="password" name="password" required></label>
+      <button type="submit">ENTER STUDIO</button><p id="loginStatus" class="status"></p>
+    </form>
+  </div>
+
+  <div id="adminView" class="admin-shell hidden">
+    <aside class="side"><div class="side-brand"><img src="assets/favicon.png"><div><strong>ALI FASHION</strong><span>Control Studio</span></div></div>
+      <nav id="adminNav">
+        <button data-tab="dashboard" class="active">Overview</button><button data-tab="products">Products</button><button data-tab="categories">Categories</button><button data-tab="content">Website content</button><button data-tab="assets">Logo & assets</button><button data-tab="orders">Orders</button><button data-tab="settings">Settings</button>
+      </nav><div class="side-bottom"><a href="index.html" target="_blank">↗ View store</a><button id="logoutBtn">Sign out</button></div>
+    </aside>
+    <main class="admin-main">
+      <header class="admin-top"><div><p>ALI FASHION</p><h1 id="tabTitle">Overview</h1></div><div class="online-dot">● LIVE</div></header>
+      <section id="tab-dashboard" class="tab active"><div class="stats" id="dashboardStats"></div><div class="panel"><h2>Recent orders</h2><div id="recentOrders"></div></div></section>
+      <section id="tab-products" class="tab"><div class="toolbar"><input id="productSearch" placeholder="Search products…"><button class="primary" id="addProductBtn">+ Add product</button></div><div class="cards-list" id="adminProducts"></div></section>
+      <section id="tab-categories" class="tab"><div class="toolbar"><p>Create/edit store categories and menu drops.</p><button class="primary" id="addCategoryBtn">+ Add category</button></div><div class="cards-list" id="adminCategories"></div></section>
+      <section id="tab-content" class="tab"><div class="panel"><h2>Editable website text & sections</h2><p class="hint">Everything here is saved to Supabase. Advanced JSON lets you edit every storefront label without touching code.</p><form id="contentForm"><div id="contentFields"></div><button class="primary" type="submit">Save website content</button><span id="contentStatus" class="status"></span></form></div></section>
+      <section id="tab-assets" class="tab"><div class="panel"><h2>Brand assets</h2><p class="hint">Upload a new logo, favicon or general media. Replace/delete anytime.</p><div id="assetManager"></div></div></section>
+      <section id="tab-orders" class="tab"><div class="toolbar"><input id="orderSearch" placeholder="Search order / customer / phone…"><button id="refreshOrders">Refresh</button></div><div id="ordersTable"></div></section>
+      <section id="tab-settings" class="tab"><div class="panel"><h2>Store settings</h2><form id="settingsForm"><div class="form-grid"><label>Store name<input name="store_name"></label><label>Currency<input name="currency" value="BDT"></label><label>Owner email<input name="owner_email" type="email"></label><label>Shipping fee<input name="shipping_fee" type="number" min="0"></label><label>Free shipping over<input name="free_shipping_over" type="number" min="0"></label><label>WhatsApp / phone<input name="phone"></label></div><label>Store address<textarea name="address" rows="3"></textarea></label><button class="primary" type="submit">Save settings</button><span id="settingsStatus" class="status"></span></form></div><div class="panel danger"><h2>Important security</h2><p>Never put a Supabase secret/service-role key, Gmail refresh token, or OAuth secret in GitHub frontend files. Only the publishable key belongs in <code>js/config.js</code>.</p></div></section>
+    </main>
+  </div>
+
+  <div class="modal" id="editorModal"><div class="modal-card"><button class="modal-x" id="closeEditor">✕</button><div id="editorBody"></div></div></div>
+  <div class="toast" id="adminToast"></div>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

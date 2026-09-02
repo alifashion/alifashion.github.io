@@ -1,0 +1,19 @@
+ALI FASHION
+├── index.html                    Public storefront
+├── af-studio-73x9.html           Hidden admin Studio
+├── assets/
+│   ├── logo-original.jpg         Uploaded source logo
+│   ├── logo.png                  Transparent default logo
+│   └── favicon.png               Generated ALI mark favicon
+├── css/
+│   ├── style.css                 Gen-Z 3D storefront design
+│   └── admin.css                 Admin Studio design
+├── js/
+│   ├── config.js                 Supabase URL + publishable key
+│   ├── app.js                    Storefront/catalog/cart/checkout
+│   └── admin.js                  Auth + CMS + products + orders + assets
+├── supabase/
+│   ├── schema.sql                Database, RLS, storage, demo content
+│   └── functions/place-order/    Secure order + Gmail notifications
+├── .github/workflows/deploy-edge.yml
+└── README.md
