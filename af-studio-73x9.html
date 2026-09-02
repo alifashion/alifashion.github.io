@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>ALI FASHION — Studio</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <div class="login-shell" id="loginView">
+    <form class="login-card" id="loginForm" method="post" action="#" onsubmit="return false;" autocomplete="off">
+      <img src="assets/logo.png" alt="ALI FASHION">
+      <span>PRIVATE CONTROL STUDIO</span>
+      <h1>Welcome back.</h1>
+      <p>Manage products, menu, photos, text, orders and the whole storefront.</p>
+      <label>Email<input type="email" name="email" required autocomplete="username"></label>
+      <label>Password<input type="password" name="password" required autocomplete="current-password"></label>
+      <button class="primary full" type="submit">ENTER STUDIO</button>
+      <p class="status" id="loginStatus"></p>
+    </form>
+  </div>
+
+  <div class="admin-shell hidden" id="adminView">
+    <aside class="side" id="adminSide">
+      <div class="side-brand"><img src="assets/favicon.png"><div><strong>ALI FASHION</strong><span>Control Studio v2</span></div></div>
+      <nav id="adminNav">
+        <button class="active" data-tab="dashboard">Overview</button>
+        <button data-tab="products">Products</button>
+        <button data-tab="categories">Categories</button>
+        <button data-tab="menu">Menu</button>
+        <button data-tab="homepage">Homepage</button>
+        <button data-tab="assets">Logo & Media</button>
+        <button data-tab="orders">Orders</button>
+        <button data-tab="settings">Settings</button>
+      </nav>
+      <div class="side-bottom"><a href="index.html" target="_blank">↗ View store</a><button id="logoutButton">Sign out</button></div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-top"><button class="side-toggle" id="sideToggle">☰</button><div><p>ALI FASHION</p><h1 id="tabTitle">Overview</h1></div><span class="live">● LIVE</span></header>
+
+      <section class="tab active" id="tab-dashboard">
+        <div class="stats" id="dashboardStats"></div>
+        <div class="panel"><div class="panel-head"><div><span class="mini">LATEST ACTIVITY</span><h2>Recent orders</h2></div></div><div id="recentOrders"></div></div>
+      </section>
+
+      <section class="tab" id="tab-products">
+        <div class="toolbar"><input id="productSearch" placeholder="Search product / SKU…"><button class="primary" id="addProductButton">＋ Add product</button></div>
+        <div class="cards-list" id="adminProducts"></div>
+      </section>
+
+      <section class="tab" id="tab-categories">
+        <div class="toolbar"><p>Categories power the shop cards and product filters.</p><button class="primary" id="addCategoryButton">＋ Add category</button></div>
+        <div class="cards-list" id="adminCategories"></div>
+      </section>
+
+      <section class="tab" id="tab-menu">
+        <div class="panel">
+          <div class="panel-head"><div><span class="mini">FULLY EDITABLE</span><h2>Website menu</h2><p>Delete, rename, reorder or add anything. Use <b>Tag</b> for Men/Women/Kids/Formal/Casual and <b>Category</b> for Loafer/Oxford/Sneakers/boots.</p></div><button class="primary" id="addMenuItem">＋ Add menu item</button></div>
+          <div class="menu-editor" id="menuEditor"></div>
+          <div class="save-row"><button class="primary" id="saveMenuButton">Save menu</button><span class="status" id="menuStatus"></span></div>
+        </div>
+      </section>
+
+      <section class="tab" id="tab-homepage">
+        <form id="homepageForm">
+          <div class="panel"><div class="panel-head"><div><span class="mini">TOP BAR</span><h2>Brand & announcement</h2></div></div><div class="grid2"><label>Store name<input name="store_name"></label><label>Announcement bar<input name="announcement"></label></div></div>
+          <div class="panel"><div class="panel-head"><div><span class="mini">FIRST IMPRESSION</span><h2>Hero section</h2></div></div><div class="grid2"><label>Small heading<input name="hero_eyebrow"></label><label>Main title <small>Use | for line 2</small><input name="hero_title"></label></div><label>Description<textarea name="hero_text" rows="3"></textarea></label><div class="grid2"><label>Primary button<input name="hero_primary"></label><label>Secondary button<input name="hero_secondary"></label><label>Hero image URL<input name="hero_image_url"></label><label>Upload new hero image<input type="file" name="hero_image_file" accept="image/*"></label></div><div class="grid2"><label>Floating small text<input name="hero_float_top"></label><label>Floating title<input name="hero_float_title"></label></div></div>
+          <div class="panel"><div class="panel-head"><div><span class="mini">CATEGORY SECTION</span><h2>Category text</h2></div></div><div class="grid2"><label>Eyebrow<input name="category_eyebrow"></label><label>Title<input name="category_title"></label></div><label>Description<input name="category_text"></label></div>
+          <div class="panel"><div class="panel-head"><div><span class="mini">PRODUCT SECTION</span><h2>Product text</h2></div></div><div class="grid2"><label>Eyebrow<input name="products_eyebrow"></label><label>Title<input name="products_title"></label></div></div>
+          <div class="panel"><div class="panel-head"><div><span class="mini">EDITORIAL BANNER</span><h2>Middle promo</h2></div></div><div class="grid2"><label>Eyebrow<input name="editorial_eyebrow"></label><label>Title <small>Use | for line 2</small><input name="editorial_title"></label></div><label>Description<textarea name="editorial_text" rows="3"></textarea></label><div class="grid2"><label>Button text<input name="editorial_button"></label><label>Image URL<input name="editorial_image_url"></label><label>Upload new image<input type="file" name="editorial_image_file" accept="image/*"></label></div></div>
+          <div class="panel"><div class="panel-head"><div><span class="mini">BOTTOM CTA</span><h2>Final call to action</h2></div></div><div class="grid2"><label>Eyebrow<input name="final_eyebrow"></label><label>Title<input name="final_title"></label></div><label>Description<input name="final_text"></label><label>Button<input name="final_button"></label></div>
+          <div class="panel"><div class="panel-head"><div><span class="mini">ADVANCED</span><h2>Extra editable content</h2><p>Ticker, benefit cards, hero proof and footer links. Keep valid JSON.</p></div></div><label>Ticker JSON<textarea class="json-box" name="ticker_json"></textarea></label><label>Hero proof JSON<textarea class="json-box small" name="proof_json"></textarea></label><label>Benefits JSON<textarea class="json-box" name="benefits_json"></textarea></label><label>Footer links JSON<textarea class="json-box" name="footer_links_json"></textarea></label><div class="grid2"><label>Footer text<input name="footer_text"></label><label>Copyright<input name="copyright"></label></div></div>
+          <div class="sticky-save"><button class="primary" type="submit">Save homepage</button><span class="status" id="homepageStatus"></span></div>
+        </form>
+      </section>
+
+      <section class="tab" id="tab-assets">
+        <div class="panel"><div class="panel-head"><div><span class="mini">BRANDING</span><h2>Logo & favicon</h2></div></div><div id="assetManager"></div></div>
+      </section>
+
+      <section class="tab" id="tab-orders">
+        <div class="toolbar"><input id="orderSearch" placeholder="Order / customer / phone / email…"><button id="refreshOrders">Refresh</button></div>
+        <div class="panel table-panel" id="ordersTable"></div>
+      </section>
+
+      <section class="tab" id="tab-settings">
+        <form class="panel" id="settingsForm"><div class="panel-head"><div><span class="mini">STORE OPERATIONS</span><h2>Settings</h2></div></div><div class="grid2"><label>Store name<input name="store_name"></label><label>Currency<input name="currency"></label><label>Owner email<input type="email" name="owner_email"></label><label>Shipping fee<input type="number" min="0" name="shipping_fee"></label><label>Free shipping over<input type="number" min="0" name="free_shipping_over"></label><label>WhatsApp / phone<input name="phone"></label></div><label>Store address<textarea rows="3" name="address"></textarea></label><div class="save-row"><button class="primary" type="submit">Save settings</button><span class="status" id="settingsStatus"></span></div></form>
+        <div class="panel warning"><h3>Security reminder</h3><p>Never put Gmail OAuth secrets, refresh tokens or Supabase service-role keys in GitHub. Only the publishable key belongs in <code>js/config.js</code>.</p></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="editorModal"><div class="modal-card"><button class="modal-x" id="editorClose">×</button><div id="editorBody"></div></div></div>
+  <div class="toast" id="adminToast"></div>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

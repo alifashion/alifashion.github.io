@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description" content="ALI FASHION — premium footwear for men, women and kids.">
+  <title>ALI FASHION — Find Your Next Pair</title>
+  <link id="dynamicFavicon" rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <img src="assets/favicon.png" alt="">
+    <span></span>
+  </div>
+
+  <div class="announcement" id="announcement">FREE DELIVERY ON SELECTED ORDERS · CASH ON DELIVERY AVAILABLE</div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="ALI FASHION home">
+      <img id="brandLogo" src="assets/logo.png" alt="ALI FASHION">
+    </a>
+
+    <nav class="desktop-menu" id="desktopMenu" aria-label="Main menu"></nav>
+
+    <div class="header-actions">
+      <button class="round-action" id="searchButton" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.8"></circle><path d="m16.2 16.2 4 4"></path></svg>
+      </button>
+      <button class="cart-action" id="cartButton" aria-label="Cart"><span>Cart</span><b id="cartCount">0</b></button>
+      <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open menu"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile menu">
+    <div class="mobile-menu-head">
+      <span>SHOP</span>
+      <button id="mobileMenuClose" aria-label="Close menu">×</button>
+    </div>
+    <nav id="mobileMenuLinks"></nav>
+    <div class="mobile-menu-foot">
+      <span>ALI FASHION</span>
+      <small>Find your next pair.</small>
+    </div>
+  </aside>
+  <div class="scrim" id="menuScrim"></div>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy reveal-up">
+        <p class="kicker" id="heroEyebrow">THE NEW FOOTWEAR EDIT</p>
+        <h1 id="heroTitle">Move better.<br><em>Look sharper.</em></h1>
+        <p class="hero-desc" id="heroText">Everyday sneakers, polished formals and performance boots — selected for the way you actually live.</p>
+        <div class="hero-buttons">
+          <button class="button button-dark" id="heroPrimary">SHOP NEW ARRIVALS</button>
+          <button class="text-button" id="heroSecondary">EXPLORE ALL <span>↗</span></button>
+        </div>
+        <div class="hero-proof" id="heroProof"></div>
+      </div>
+
+      <div class="hero-visual reveal-scale" id="heroVisual">
+        <div class="hero-image-wrap">
+          <img id="heroImage" alt="ALI FASHION featured footwear">
+          <div class="hero-placeholder" id="heroPlaceholder" aria-hidden="true">
+            <div class="abstract-shoe"></div>
+          </div>
+        </div>
+        <div class="hero-floating-card">
+          <span id="heroFloatTop">NEW SEASON</span>
+          <strong id="heroFloatTitle">Designed for every step.</strong>
+          <button id="heroFloatButton">View collection →</button>
+        </div>
+        <div class="hero-index">ALI / <span>01</span></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Store highlights">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </section>
+
+    <section class="shell category-section" id="categories">
+      <div class="section-title reveal-up">
+        <div><p class="kicker" id="categoryEyebrow">SHOP YOUR WAY</p><h2 id="categoryTitle">Built around your day.</h2></div>
+        <p id="categoryText">From office-ready classics to match-day performance.</p>
+      </div>
+      <div class="category-strip" id="categoryStrip"></div>
+    </section>
+
+    <section class="shell shop-section" id="shop">
+      <div class="shop-head reveal-up">
+        <div><p class="kicker" id="productsEyebrow">FRESH PAIRS</p><h2 id="productsTitle">New arrivals</h2></div>
+        <button class="filter-toggle" id="filterToggle">Filter <span>＋</span></button>
+      </div>
+
+      <div class="filter-bar" id="filterBar">
+        <div class="filter-scroll" id="filterPills"></div>
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="featured">Featured</option>
+          <option value="newest">Newest</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state hidden" id="emptyProducts">No products found in this collection.</div>
+    </section>
+
+    <section class="editorial shell reveal-up" id="editorial">
+      <div class="editorial-media" id="editorialMedia"><img id="editorialImage" alt="ALI FASHION collection"></div>
+      <div class="editorial-copy">
+        <p class="kicker" id="editorialEyebrow">ALI FASHION SELECTS</p>
+        <h2 id="editorialTitle">One store.<br>Every occasion.</h2>
+        <p id="editorialText">Loafers for the office, sneakers for everyday, and boots built for the pitch. Find the right pair without the guesswork.</p>
+        <button class="button button-light" id="editorialButton">DISCOVER THE COLLECTION</button>
+      </div>
+    </section>
+
+    <section class="shell benefits" id="benefits"></section>
+
+    <section class="shell final-cta reveal-up">
+      <p class="kicker" id="finalEyebrow">YOUR NEXT PAIR IS HERE</p>
+      <h2 id="finalTitle">Good shoes change the whole fit.</h2>
+      <p id="finalText">Explore the latest ALI FASHION collection and order in a few taps.</p>
+      <button class="button button-red" id="finalButton">SHOP NOW</button>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <div class="footer-brand"><img id="footerLogo" src="assets/logo.png" alt="ALI FASHION"><p id="footerText">Footwear for work, weekends and game day.</p></div>
+    <div class="footer-links" id="footerLinks"></div>
+    <div class="footer-bottom"><span id="copyright">© 2026 ALI FASHION. ALL RIGHTS RESERVED.</span><span id="footerContact"></span></div>
+  </footer>
+
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-box">
+      <div class="search-label">SEARCH ALI FASHION</div>
+      <div class="search-input-row"><input id="searchInput" autocomplete="off" placeholder="Sneakers, loafers, football boots…"><button id="searchClose">×</button></div>
+      <p>Start typing to filter the collection instantly.</p>
+    </div>
+  </div>
+
+  <div class="cart-scrim" id="cartScrim"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-head"><div><span>YOUR BAG</span><h3>Cart <b id="cartCountDrawer">0</b></h3></div><button id="cartClose">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-summary">
+      <div><span>Subtotal</span><strong id="cartSubtotal">৳0</strong></div>
+      <small id="shippingNote">Shipping is calculated at checkout.</small>
+      <button class="button button-red full" id="checkoutButton">CHECKOUT</button>
+    </div>
+  </aside>
+
+  <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-label="Product details">
+    <div class="product-modal-shell" id="productModalShell">
+      <button class="modal-close" id="productModalClose">×</button>
+      <div id="productModalBody"></div>
+    </div>
+  </div>
+
+  <div class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Checkout">
+    <div class="checkout-shell">
+      <button class="modal-close" id="checkoutClose">×</button>
+      <p class="kicker">SECURE CHECKOUT</p>
+      <h3>Complete your order</h3>
+      <form id="checkoutForm">
+        <div class="form-grid">
+          <label>Full name<input name="name" required autocomplete="name"></label>
+          <label>Email<input name="email" type="email" required autocomplete="email"></label>
+          <label>Phone<input name="phone" required autocomplete="tel"></label>
+          <label>City<input name="city" required></label>
+        </div>
+        <label>Delivery address<textarea name="address" rows="3" required></textarea></label>
+        <label>Order note <span>(optional)</span><textarea name="note" rows="2"></textarea></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off">
+        <div class="checkout-total"><span>Estimated total</span><strong id="checkoutTotal">৳0</strong></div>
+        <button class="button button-red full" id="placeOrderButton" type="submit">PLACE ORDER</button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
